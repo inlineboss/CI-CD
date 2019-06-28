@@ -1,1 +1,0 @@
-/usr/bin/c++    -pthread   CMakeFiles/gtest_version.dir/googletest/main_test.cpp.o  -o gtest_version -rdynamic /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a libhelloworld.a 
