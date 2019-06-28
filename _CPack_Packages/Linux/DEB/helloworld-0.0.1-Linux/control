@@ -1,0 +1,9 @@
+Package: helloworld
+Version: 0.0.1
+Section: devel
+Priority: optional
+Architecture: amd64
+Installed-Size: 21
+Maintainer: askimarhond@gmail.com
+Description: helloworld built using CMake
+

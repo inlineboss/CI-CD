@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/facs/Work/homeproject/OTUS/otus_ci-cd/lib.cpp
+lib.h
+/home/facs/Work/homeproject/OTUS/otus_ci-cd/lib.h
+version.h
+/home/facs/Work/homeproject/OTUS/otus_ci-cd/version.h
+
+/home/facs/Work/homeproject/OTUS/otus_ci-cd/lib.h
+
+/home/facs/Work/homeproject/OTUS/otus_ci-cd/version.h
+
