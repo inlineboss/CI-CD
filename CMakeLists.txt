@@ -20,7 +20,9 @@ target_include_directories(helloworld
 )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
-include_directories(SYSTEM ${GTEST_INCLUDE_DIRS})
+target_include_directories(gtest_version PRIVATE
+	${GTEST_INCLUDE_DIRS}
+)
 
 set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
