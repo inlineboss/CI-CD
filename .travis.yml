@@ -10,7 +10,7 @@ script:
 - cd /usr/src/gtest
 - sudo cmake CMakeLists.txt
 - sudo make
-  sudo cp *.a /usr/lib
+- sudo cp *.a /usr/lib
 - cd -
 - cmake .
 - cmake --build .
