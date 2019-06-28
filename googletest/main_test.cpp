@@ -1,8 +1,14 @@
 #include "gtest/gtest.h"
-#include "gmock/gmock.h"
+#include "lib.h"
 
-int main(int argc, char** argv)
-{	::testing::InitGoogleMock(&argc, argv);
+TEST(TEST_VERSION, version)
+{
+	EXPECT_TRUE(version() > 0);
+}
 
-    return RUN_ALL_TESTS();
+int main(int argc, char** argv){
+ ::testing::InitGoogleTest(&argc, argv);
+
+  int ret { RUN_ALL_TESTS() };
+  return ret;
 }

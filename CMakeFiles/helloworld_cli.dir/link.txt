@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/helloworld_cli.dir/main.cpp.o  -o helloworld_cli libhelloworld.a 
+/usr/bin/c++    -pthread   CMakeFiles/helloworld_cli.dir/main.cpp.o  -o helloworld_cli -rdynamic libhelloworld.a 

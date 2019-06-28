@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/facs/Work/homeproject/OTUS/otus_ci-cd/lib.h
+/home/facs/work/otus_ci-cd/lib.h
 
-/home/facs/Work/homeproject/OTUS/otus_ci-cd/main.cpp
+/home/facs/work/otus_ci-cd/main.cpp
 lib.h
-/home/facs/Work/homeproject/OTUS/otus_ci-cd/lib.h
+/home/facs/work/otus_ci-cd/lib.h
 iostream
 -
 

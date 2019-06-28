@@ -4,7 +4,6 @@ project(helloworld VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 find_package(GTest REQUIRED)
-
 configure_file(version.h.in version.h)
 
 add_executable(helloworld_cli main.cpp)
@@ -19,10 +18,9 @@ set_target_properties(helloworld_cli helloworld test_version gtest_version PROPE
 target_include_directories(helloworld
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
-target_include_directories(gtest_version
- 	../include
-    ${GTEST_INCLUDE_DIRS}
-)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+include_directories(SYSTEM ${GTEST_INCLUDE_DIRS})
 
 set_target_properties(test_version PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
@@ -38,9 +36,13 @@ target_link_libraries(test_version
     helloworld
 )
 
-target_link_libraries(gtest_version
-	${GTEST_INCLUDE_DIRS}
-	helloworld
+target_link_libraries(gtest_version 
+    ${GTEST_BOTH_LIBRARIES}
+    helloworld
+)
+
+target_include_directories(gtest_version PRIVATE
+	.
 )
 
 if (MSVC)
@@ -85,3 +87,4 @@ include(CPack)
 enable_testing()
 
 add_test(test_version test_version)
+add_test(gtest_version gtest_version)
